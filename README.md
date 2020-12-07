@@ -42,7 +42,9 @@ npm run install - если требуется
 npm run generate
 ``
 
+``
 - Копируем все из <project-name-nuxt>/dist в <project-name-laravel>/public
+``
 
 ```
 <project-name-laravel>/routes/web.php
