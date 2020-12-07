@@ -4,15 +4,30 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| client/nuxt.config.js:
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
+  build: {
+        publicPath: '/nuxt/'
+    },
+   router: {
+    base: './static/',
+        mode: 'history' or 'hash'
+    }
+
+|--------------------------------------------------------------------------
+| config/filesystems.php:links
+|--------------------------------------------------------------------------
+'links' => [
+    ...
+    public_path('static') => base_path('client/dist'),
+    ...
+],
+
+-----------------------------
+return file_get_contents(public_path('/static/index.html'));
 */
 
 Route::get('/', function () {
+    // для ручного переноса в public
         return file_get_contents(public_path('index.html'));
 });

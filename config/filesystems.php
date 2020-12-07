@@ -66,8 +66,8 @@ return [
     */
 
     'links' => [
-//        public_path('storage') => storage_path('app/public'),
-        public_path('dist') => base_path('client/dist'),
+        public_path('storage') => storage_path('app/public'),
+        public_path('static') => base_path('client/dist'),
     ],
 
 ];

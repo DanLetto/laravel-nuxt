@@ -1,4 +1,5 @@
 export default {
+  // dir: 'mySite',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'client',
@@ -38,5 +39,10 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-  }
+    // publicPath: '/nuxt/'
+  },
+  // router: {
+  //   base: './static/',
+  //   mode: 'history'
+  // }
 }

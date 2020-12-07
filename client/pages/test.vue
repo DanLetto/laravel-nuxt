@@ -3,12 +3,18 @@
     <div>
       test page
       <NuxtLink to="/"> - index -</NuxtLink>
+      <p>{{posts}}</p>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData(context) {
+    let response = await context.app.$axios.$post(`http://lanu/api/test-api`)
+    return { posts: response }
+  },
+}
 </script>
 
 <style>

@@ -19,5 +19,5 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::post('/test-api', function () {
-    return 'EPTA!!!!!';
+    return 'response ssr rest api! :)';
 });
